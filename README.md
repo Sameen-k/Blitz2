@@ -4,6 +4,11 @@ The goal is for my application to be able to host 14,000 requests at a given tim
 
 *1696439476608,5,HTTP Request,Non HTTP response code: java.net.NoRouteToHostException,Non HTTP response message: Cannot assign requested address (Address not available),blitz-c4 1-13233,text,false,2381,0,9,9,http://52.90.13.143:5000/,0,0,5*
 
+## Diagram 
+![blitz2 drawio](https://github.com/Sameen-k/Blitz2/assets/128739962/2e344dfd-f947-404d-872c-b389a2c798ed)
+
+
+
 ## Diagnosis:
 The issue lies with processing requests. We can note that in the error for some reason those 7 requests were unable to connect to the host. Additionally, since this instance has CloudWatch installed, when the 14,000 requests came in, a spike in CPU usage was observed. With this information, we can assume this issue is related to CPU usage.
 
